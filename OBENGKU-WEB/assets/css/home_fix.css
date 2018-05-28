@@ -4,7 +4,10 @@
     }
 
     .logo1{
-       margin-top: -3%;
+       
+       height:34%;
+       width: 34%;
+       margin-right: 70%;
         }
 
     
@@ -47,7 +50,7 @@
 }
 .header1{
  
- 			height:80px;
+ 			height:auto;
 			width: 100%;
 			background:#fdd100;
             opacity:1.0;
@@ -75,9 +78,9 @@
 
 .warna{
    color: white;
-   font-size: 18px;
+   font-size: 24px;
    border-color: black;
-   margin-top:1%;
+  
  
   /* Set up the hover */
   /* If you aren't using autoprefix, remember to prefix the gradient for other browsers */
