@@ -2,71 +2,93 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mr Bengkel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.css" />
-    <script src="main.js"></script>
+
 <link rel="stylesheet" href="assets\css\home_fix.css">
  <!-- <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> -->
  <script src="assets\js\jquery-3.3.1.min.js"></script>
+<script src="assets\js\bootstrap.min.js"></script>
 <script src="assets\js\fade.js"></script>
 <script class="cssdeck" src="assets\js\jquery.min.js"></script> 
 
 </head>
-<body>
-    <header class="card-header header1 ">
-                <div class="row">
-            <!-- gambar logo -->
-                <div class="col">
-                <img src="assets/img/logo.png" class="rounded  logo1" alt="Cinque Terre" width="330" height="72">
-                    </div>
-            <div class="col-4"></div>
-            <div class="col warna "><a href="#" class="header_link" style="text-decoration: none;color:white">MENU</a></div>
-            <div class="col warna ">SERVICE</div>
-            <div class="col warna "  >CONTACT</div>
-            <div class="col warna "  >ABOUT</div>
-             <div class="col"></div>
-            
+
+    <nav class="navbar navbar-expand-md navbar-dark header1" style="background-color:#fdd100;">
+        <a class="navbar-brand" style="color: white" href="index.html"><img class="logo1" src="assets/img/logo.png"></a>
+        <button class="navbar-toggler" style="" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav" style="">
+                <li class="nav-item warna ">
+                    <a class="nav-link " href="#">HOME</a>
+                </li>
+                <li class="nav-item warna">
+                    <a class="nav-link" href="#">SERVICE</a>
+                </li>
+                <li class="nav-item warna">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item warna">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="col">
+                    <a class="nav-link" href="#">    </a>
+                </li>
+                <li class="col">
+                    <a class="nav-link" href="#">    </a>
+                </li>              
+            </ul>
         </div>
-    </header>
-    <!-- paralax pertama -->
+    </nav>
+
+            <!-- paralax pertama -->
 <div class="card-body parallax">
-        <h1 class="fade-down fade-ani " style="color: white;margin-left: 18%;top: 20%;font-size: 54px;font-family:Arial, Helvetica, sans-serif">
-            Mari bergabung Menjadi Mitra Kami
-        </h1>
-    <button type="button" class="btn btn-warning btn-lg btn1 fade-left fade-ani btn_login" style="margin-left:30%; ">DAFTAR</button>
-    <button type="button" class="btn btn-outline-warning btn1 fade-right fade-ani btn_login" style="margin-left:5%;">LOGIN</button>
+        <div class="row">
+            <div class="col-2"></div>
+                <div class="col-9">
+                    <h1 class="fade-right fade-ani text-center" style="color: white;top: 170%;font-size: 54px;font-family:Arial, Helvetica, sans-serif">
+                        Mari bergabung Menjadi Mitra Kami
+                    </h1>
+                    </div>
+            <div class="col"></div>
+        </div>
+    <a type="button" class="btn btn-warning btn-lg btn1 fade-left fade-ani btn_login" style="margin-left:25%; " href="daftar.html">DAFTAR</a>
+    <a type="button" class="btn btn-outline-warning btn1 fade-right fade-ani btn_login" style="margin-left:5%;" href="login.php">LOGIN</a>
 
 </div>
 
 <div class=" card-body  box_txt">
     <!-- kotak silver -->
     <div class="row " >
-        <div class="col fade-left fade-ani" style="margin-left:9%">
-            <div class="card " style="width:65%;height:95%;">
-                <img class="card-img-top" src="assets/img/p2.jpg">
+        <div class="col-sm fade-left fade-ani" style="margin-left:5%">
+            <div class="card " style="width:85%;height:95%;">
+                <img class="card-img-top" src="assets/img/diagnosa.jpg">
                 <div class="card-body">
-                    <h4 class="card-title" style="font-size:20px;color: black">John Doe</h4>
+                    <h4 class="card-title text-center" style="font-size:20px;color: black">Injection Diagnosa Tool</h4>
                     
                     </div>
                 </div>
             </div>
-                <div class="col fade-left fade-ani">
-                        <div class="card " style="width:65%;height:95%;">
-                            <img class="card-img-top" src="assets/img/p2.jpg">
+                <div class="col-sm fade-left fade-ani">
+                        <div class="card " style="width:85%;height:95%;">
+                            <img class="card-img-top" src="assets/img/service.jpg">
                             <div class="card-body">
-                                <h4 class="card-title" style="font-size:20px;color: black">John Doe</h4>
+                                <h4 class="card-title text-center" style="font-size:20px;color: black">Service</h4>
                                 
                         
                             </div>
                         </div>
                         </div>
-                        <div class="col fade-left fade-ani">
-                            <div class="card " style="width:65%;height:95%;">
-                                <img class="card-img-top" src="assets/img/p2.jpg">
+                        <div class="col-sm fade-left fade-ani">
+                            <div class="card " style="width:85%;height:95%;">
+                                <img class="card-img-top" src="assets/img/tips.jpg">
                                 <div class="card-body">
-                                    <h4 class="card-title" style="font-size:20px;color: black">John Doe</h4>
+                                    <h4 class="card-title text-center" style="font-size:20px;color: black">Tips</h4>
                                     
                         
                                 </div>
@@ -74,7 +96,7 @@
                         </div>
 
     </div>
-    <p class=" fade-left fade-ani">Scroll Up and Down this page to see the parallax scrolling effect. This div is just here to enable scrolling. Tip: Try to
+    <p class=" fade-left fade-ani text-center">Scroll Up and Down this page to see the parallax scrolling effect. This div is just here to enable scrolling. Tip: Try to
     remove the background-attachment property to remove the scrolling effect.</p>
 </div>
 <!-- paralax2 -->

@@ -1,0 +1,172 @@
+<html>
+    <header>
+        <title>
+            injection diagnosa tool
+        </title>
+        <style>
+        
+        </style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Mr Bengkel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.css" />
+
+<link rel="stylesheet" href="assets\css\home_fix.css">
+<!-- <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> -->
+<script src="assets\js\jquery-3.3.1.min.js"></script>
+<script src="assets\js\bootstrap.min.js"></script>
+<script src="assets\js\fade.js"></script>
+<script class="cssdeck" src="assets\js\jquery.min.js"></script>
+
+
+ <!-- scrip diagnosa -->
+<script>
+    function hitung() {
+        var kedip1 = pendek.value;
+        var kedip2 = panjang.value;
+        var nilai = (kedip1 * 1) + (kedip2 * 10);
+
+
+
+        document.getElementById("hasil").innerHTML = "#H" + nilai;
+
+    }
+
+    function hapus() {
+        document.getElementById("rr").reset();
+    };
+
+
+
+    function ket() {
+        var kedip1 = pendek.value;
+        var kedip2 = panjang.value;
+        var nilai = (kedip1 * 1) + (kedip2 * 10);
+        var txt;
+        switch (nilai) {
+            case 12:
+                txt = "masalah anda terletak pada karburator";
+                Image.src
+                break;
+            case 24:
+                txt = "kabel spido rusak";
+
+                break;
+            default:
+                txt = "validasi code error !  Cek Beam input "
+
+        }
+        document.getElementById("sol").innerHTML = txt;
+    };
+
+    function poto() {
+        var kedip1 = pendek.value;
+        var kedip2 = panjang.value;
+        var nilai = (kedip1 * 1) + (kedip2 * 10);
+        switch (nilai) {
+            case 12:
+                txt = "assets/img/logo.png";
+                Image.src
+                break;
+            case 24:
+                txt = "";
+
+                break;
+            default:
+                txt = " "
+
+        }
+        document.getElementById("potos").src = txt;
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+    </header>
+    <body>
+
+
+<nav class="navbar navbar-expand-md navbar-dark header1" style="background-color:#fdd100;">
+    <a class="navbar-brand" style="color: white" href="index.html">
+        <img class="logo1" src="assets/img/logo.png">
+    </a>
+    <button class="navbar-toggler" style="" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item warna ">
+                <a class="nav-link " href="#">HOME</a>
+            </li>
+            <li class="nav-item warna">
+                <a class="nav-link" href="#">SERVICE</a>
+            </li>
+            <li class="nav-item warna">
+                <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item warna">
+                <a class="nav-link" href="#">ABOUT</a>
+            </li>
+            <li class="col">
+                <a class="nav-link" href="#"> </a>
+            </li>
+            <li class="col">
+                <a class="nav-link" href="#"> </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- header -->
+<br><br><br><br><br><br>
+<div class="container-fluid row">
+        <div class="col-9"><h3 class="text-center" id="sol"></h3>
+            <div class="col-3 float-right" >
+                    <div class="card">
+                         <div class="card-header bg-warning text-center" style="color: white">ERORR CODE</div>
+                         <div class="card-body">
+                         <h1 id="hasil" class=" text-center" style="color: rgb(255, 0, 0); font-size: 65px;"></h1>
+                        </div> 
+                    </div> 
+                </div>
+         </div>
+
+
+        <div class="form-group mx-sm-1 col"  >
+            <form id="rr">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="text" class="form-control text-center" id="pendek" placeholder=" Beam Pendek"><br>
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="text" class="form-control text-center" id="panjang" placeholder=" Beam Panjang">
+            </form>
+
+            <button class="btn btn btn-outline-warning " style="margin-left: 25%" onclick=" hitung ();ket();poto();">diagnosa</button>
+            <button class="btn btn btn-outline-warning " style="margin-left: 5%" onclick=" hapus(); window.location.reload();">reset</button>
+        </div>
+  
+               
+</div>
+
+<div class=" row">
+    <div class="col-3">
+        <div class="card-header" style=" background-color: aquamarine">
+            <div class=" card-body">
+                    <img src="assets/img/service.jpg" id="potos" width="200px"; height="200px;"></img>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
