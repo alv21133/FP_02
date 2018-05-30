@@ -62,9 +62,10 @@
 
 .box_txt{
     height:500px;
-    background-color:darkgrey;
+    background-color:rgb(95, 95, 95);
     font-size:25px;
     color: white;
+    
     
 
 }
