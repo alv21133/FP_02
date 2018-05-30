@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<style type="text/css">
+		.header
+		{
+			background-color: orange;
+			width: all;
+			height: 90px;
+			margin-bottom: 10px;
+		}
+		.footer
+		{
+			background-color: black;
+			width: all;
+			height: 50px;
+			margin-top: 50px;
+		}
+		.logo
+		{
+			width: 200px;
+			height: 70px;
+			margin-top: 10px;
+		}
+		.font
+		{
+			font-family: clarendon blk bt;
+		}
+		.zoom
+		{
+
+		}
+		.zoom:hover
+		{
+			background-color: zoom;
+  			-webkit-transform: scale(1.08);
+ 			transform: scale(1.08);
+			z-index: 50;
+		}
+	</style>
+</head>
+<body ng-app="">
+<div class="row-1">
+	<header class="header">
+		<div class="col">
+			<div>
+				<img src="assets/img/logo.png" class="logo">
+			</div>
+		</div>
+	</header>
+</div>
+<div class="container">
+	<h1 class="font"><center> TIPS & TRIK OTOMOTIF </center></h1>
+	<br>
+	<div class="row">
+		<div class="col zoom">
+			<div class="card" style="width: 18rem;">
+			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
+			  	<div class="card-body">
+			    	<h5 class="card-title">Card title</h5>
+			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <form>
+				  		Pick a topic:
+				  		<input type="radio" ng-model="myVar1" value="dogs">view more
+					</form>
+					<div ng-switch="myVar1">
+				 	 	<div ng-switch-when="dogs">
+				     		<h1>Dogs</h1>
+				    		<p>Welcome to a world of dogs.</p>
+				  		</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<div class="col zoom">
+			<div class="card" style="width: 18rem;">
+			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
+			  	<div class="card-body">
+			    	<h5 class="card-title">Card title</h5>
+			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <form>
+				  		Pick a topic:
+				  		<input type="radio" ng-model="myVar2" value="dogs">view more
+					</form>
+					<div ng-switch="myVar2">
+				 	 	<div ng-switch-when="dogs">
+				     		<h1>Dogs</h1>
+				    		<p>Welcome to a world of dogs.</p>
+				  		</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<div class="col zoom">
+			<div class="card" style="width: 18rem;">
+			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
+			  	<div class="card-body">
+			    	<h5 class="card-title">Card title</h5>
+			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <form>
+				  		Pick a topic:
+				  		<input type="radio" ng-model="myVar3" value="dogs">view more
+					</form>
+					<div ng-switch="myVar3">
+				 	 	<div ng-switch-when="dogs">
+				     		<h1>Dogs</h1>
+				    		<p>Welcome to a world of dogs.</p>
+				  		</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col zoom">
+			<div class="card" style="width: 18rem;">
+			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
+			  	<div class="card-body">
+			    	<h5 class="card-title">Card title</h5>
+			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <form>
+				  		Pick a topic:
+				  		<input type="radio" ng-model="myVar4" value="dogs">view more
+					</form>
+					<div ng-switch="myVar4">
+				 	 	<div ng-switch-when="dogs">
+				     		<h1>Dogs</h1>
+				    		<p>Welcome to a world of dogs.</p>
+				  		</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<div class="col zoom">
+			<div class="card" style="width: 18rem;">
+			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
+			  	<div class="card-body">
+			    	<h5 class="card-title">Card title</h5>
+			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <form>
+				  		Pick a topic:
+				  		<input type="radio" ng-model="myVar5" value="dogs">view more
+					</form>
+					<div ng-switch="myVar5">
+				 	 	<div ng-switch-when="dogs">
+				     		<h1>Dogs</h1>
+				    		<p>Welcome to a world of dogs.</p>
+				  		</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<div class="col zoom">
+			<div class="card" style="width: 18rem;">
+			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
+			  	<div class="card-body">
+			    	<h5 class="card-title">Card title</h5>
+			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <form>
+				  		Pick a topic:
+				  		<input type="radio" ng-model="myVar6" value="dogs">view more
+					</form>
+					<div ng-switch="myVar6">
+				 	 	<div ng-switch-when="dogs">
+				     		<h1>Dogs</h1>
+				    		<p>Welcome to a world of dogs.</p>
+				  		</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	
+</footer>
+</body>
+</html>
