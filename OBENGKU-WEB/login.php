@@ -9,7 +9,7 @@
 <head>
 	<title>Login</title>
  <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mr Bengkel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
 <script src="assets\js\bootstrap.min.js"></script>
 <script src="assets\js\fade.js"></script>
 <script class="cssdeck" src="assets\js\jquery.min.js"></script> 
+<script src='https://www.google.com/recaptcha/api.js'></script>
 	<style type="text/css">
 			.kotak
 			{
@@ -113,7 +114,7 @@
 
  <div class="navbar-full">
   <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#fdd100">
-        <a class="navbar-brand" style="color: white" href="index.html"><img class="logo1" src="assets/img/logo.png"></a>
+        <a class="navbar-brand" style="color: white" href="index.html"><img class="logo1"src="assets/img/logo.png"></a>
         <button class="navbar-toggler" style="" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -170,7 +171,7 @@
 			<input type="password" name="password" placeholder="password" class="username form-control"required="wajib diisi">
 			
 			 <div class="form-group">
-                    <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
+                     <div class="g-recaptcha" data-sitekey="6LfZN1sUAAAAAK7jcj-hw7qI7geqi9X8Q9ma5UMT"></div>
              </div>
 
 			<input type="submit" name="submit" class="submit btn-outline-light" value="submit" href="https://facebook.com" onclick="validate()">

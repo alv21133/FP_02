@@ -8,7 +8,7 @@
         </style>
 
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale = 1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Mr Bengkel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,14 +82,22 @@
         document.getElementById("potos").src = txt;
     }
 
+    // loader function
 
+
+
+    function loading() {
+       
+       $('#loadingtime').hide().show('slow').delay(800).hide('slow');
+      
+    }
+
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+    }
 
 </script>
-
-
-
-
-
 
 
     </header>
@@ -127,8 +135,18 @@
     </div>
 </nav>
 
+
+</div>
+<div id="loadingtime" style="height:100%;width: 100%;background-color: #fdd100 ;">
+    <div id="loader"></div>
+</div>
+<!-- loader -->
 <!-- header -->
+
+           
+        <!-- loader -->
 <br><br><br><br><br><br>
+
 <div class="container-fluid row">
         <div class="col-9"><h3 class="text-center" id="sol"></h3>
             <div class="col-3 float-right" >
@@ -150,16 +168,16 @@
             <input type="text" class="form-control text-center" id="panjang" placeholder=" Beam Panjang">
             </form>
 
-            <button class="btn btn btn-outline-warning " style="margin-left: 25%" onclick=" hitung ();ket();poto();">diagnosa</button>
+            <button class="btn btn btn-outline-warning " style="margin-left: 25%" onclick=" hitung ();ket();poto(); loading();">diagnosa</button>
             <button class="btn btn btn-outline-warning " style="margin-left: 5%" onclick=" hapus(); window.location.reload();">reset</button>
         </div>
   
                
-</div>
 
+<div style="display:none;" id="myDiv" class="animate-bottom"></div>
 <div class=" row">
     <div class="col-3">
-        <div class="card-header" style=" background-color: aquamarine">
+        <div class="card-header">
             <div class=" card-body">
                     <img src="assets/img/service.jpg" id="potos" width="200px"; height="200px;"></img>
 
@@ -168,5 +186,9 @@
     </div>
 </div>
 
+
+
+       
+        </div>
     </body>
 </html>
