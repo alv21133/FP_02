@@ -2,7 +2,19 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mr Bengkel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.css" />
+
+	<link rel="stylesheet" href="assets\css\home_fix.css">
+	 <!-- <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> -->
+	<script src="assets\js\jquery-3.3.1.min.js"></script>
+	<script src="assets\js\bootstrap.min.js"></script>
+	<script src="assets\js\fade.js"></script>
+	<script class="cssdeck" src="assets\js\jquery.min.js"></script> 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<style type="text/css">
 		.header
@@ -40,144 +52,222 @@
  			transform: scale(1.08);
 			z-index: 50;
 		}
+		.gambarisi
+		{
+			width: 200px;
+			height: 200px;
+		}
+		.bgdasr
+		{
+			background-color: white;
+			width: all;
+			height: 2000px;
+		}
 	</style>
 </head>
 <body ng-app="">
-<div class="row-1">
-	<header class="header">
-		<div class="col">
-			<div>
-				<img src="assets/img/logo.png" class="logo">
+<nav class="navbar navbar-expand-md navbar-dark header1" style="background-color:#fdd100;">
+        <a class="navbar-brand" style="color: white" href="index.html"><img class="logo1" src="assets/img/logo.png"></a>
+        <button class="navbar-toggler" style="" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav" style="">
+                <li class="nav-item warna ">
+                    <a class="nav-link " href="#">HOME</a>
+                </li>
+                <li class="nav-item warna">
+                    <a class="nav-link" href="#">SERVICE</a>
+                </li>
+                <li class="nav-item warna">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item warna">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="col">
+                    <a class="nav-link" href="#">    </a>
+                </li>
+                <li class="col">
+                    <a class="nav-link" href="#">    </a>
+                </li>              
+            </ul>
+        </div>
+   </nav>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+<div class="container-fluid bgdasr">
+	<div class="card" style="border-color: orange">
+	  	<div class="card-header text-center" style="color: white;background-color: orange">
+	    	Featured
+	  	</div>
+	  	<div class="card-body">
+	    	<h5 class="card-title">Special title treatment</h5>
+	   		<p class="card-image"> <img src="assets/img/mesinedit.jpg" class="gambarisi"> </p>
+			<div ng-app="">
+			  	<form>
+			  		<p>
+			  			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		</p>
+			    	Check to show more:
+			    	<input type="checkbox" ng-model="myVar">
+			  	</form>
+			  	<p ng-show="myVar">
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  	</p>
 			</div>
-		</div>
-	</header>
-</div>
-<div class="container">
-	<h1 class="font"><center> TIPS & TRIK OTOMOTIF </center></h1>
-	<br>
-	<div class="row">
-		<div class="col zoom">
-			<div class="card" style="width: 18rem;">
-			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
-			  	<div class="card-body">
-			    	<h5 class="card-title">Card title</h5>
-			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <form>
-				  		Pick a topic:
-				  		<input type="radio" ng-model="myVar1" value="dogs">view more
-					</form>
-					<div ng-switch="myVar1">
-				 	 	<div ng-switch-when="dogs">
-				     		<h1>Dogs</h1>
-				    		<p>Welcome to a world of dogs.</p>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
-		</div>
-		<div class="col zoom">
-			<div class="card" style="width: 18rem;">
-			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
-			  	<div class="card-body">
-			    	<h5 class="card-title">Card title</h5>
-			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <form>
-				  		Pick a topic:
-				  		<input type="radio" ng-model="myVar2" value="dogs">view more
-					</form>
-					<div ng-switch="myVar2">
-				 	 	<div ng-switch-when="dogs">
-				     		<h1>Dogs</h1>
-				    		<p>Welcome to a world of dogs.</p>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
-		</div>
-		<div class="col zoom">
-			<div class="card" style="width: 18rem;">
-			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
-			  	<div class="card-body">
-			    	<h5 class="card-title">Card title</h5>
-			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <form>
-				  		Pick a topic:
-				  		<input type="radio" ng-model="myVar3" value="dogs">view more
-					</form>
-					<div ng-switch="myVar3">
-				 	 	<div ng-switch-when="dogs">
-				     		<h1>Dogs</h1>
-				    		<p>Welcome to a world of dogs.</p>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
-		</div>
+	  	</div>
 	</div>
 	<br>
-	<br>
-	<div class="row">
-		<div class="col zoom">
-			<div class="card" style="width: 18rem;">
-			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
-			  	<div class="card-body">
-			    	<h5 class="card-title">Card title</h5>
-			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <form>
-				  		Pick a topic:
-				  		<input type="radio" ng-model="myVar4" value="dogs">view more
-					</form>
-					<div ng-switch="myVar4">
-				 	 	<div ng-switch-when="dogs">
-				     		<h1>Dogs</h1>
-				    		<p>Welcome to a world of dogs.</p>
-				  		</div>
-					</div>
-			  	</div>
+	<div class="card" style="border-color: orange">
+	  	<div class="card-header text-center" style="color: white;background-color: orange">
+	    	Featured
+	  	</div>
+	  	<div class="card-body">
+	    	<h5 class="card-title">Special title treatment</h5>
+	   		<p class="card-image"> <img src="assets/img/mesinedit.jpg" class="gambarisi"> </p>
+			<div ng-app="">
+			  	<form>
+			  		<p>
+			  			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		</p>
+			    	Check to show more:
+			    	<input type="checkbox" ng-model="myVar2">
+			  	</form>
+			  	<p ng-show="myVar2">
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  	</p>
 			</div>
-		</div>
-		<div class="col zoom">
-			<div class="card" style="width: 18rem;">
-			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
-			  	<div class="card-body">
-			    	<h5 class="card-title">Card title</h5>
-			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <form>
-				  		Pick a topic:
-				  		<input type="radio" ng-model="myVar5" value="dogs">view more
-					</form>
-					<div ng-switch="myVar5">
-				 	 	<div ng-switch-when="dogs">
-				     		<h1>Dogs</h1>
-				    		<p>Welcome to a world of dogs.</p>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
-		</div>
-		<div class="col zoom">
-			<div class="card" style="width: 18rem;">
-			  	<img class="card-img-top" src="assets/img/mesinedit.jpg" alt="Card image cap">
-			  	<div class="card-body">
-			    	<h5 class="card-title">Card title</h5>
-			    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <form>
-				  		Pick a topic:
-				  		<input type="radio" ng-model="myVar6" value="dogs">view more
-					</form>
-					<div ng-switch="myVar6">
-				 	 	<div ng-switch-when="dogs">
-				     		<h1>Dogs</h1>
-				    		<p>Welcome to a world of dogs.</p>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
-		</div>
+	  	</div>
 	</div>
+	<br>
+	<div class="card" style="border-color: orange">
+	  	<div class="card-header text-center" style="color: white;background-color: orange">
+	    	Featured
+	  	</div>
+	  	<div class="card-body">
+	    	<h5 class="card-title">Special title treatment</h5>
+	   		<p class="card-image"> <img src="assets/img/mesinedit.jpg" class="gambarisi"> </p>
+			<div ng-app="">
+			  	<form>
+			  		<p>
+			  			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		</p>
+			    	Check to show more:
+			    	<input type="checkbox" ng-model="myVar2">
+			  	</form>
+			  	<p ng-show="myVar2">
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  	</p>
+			</div>
+	  	</div>
+	</div>	
 </div>
-<footer class="footer">
-	
-</footer>
+
+
+<div class=" jumbotron jumbotron-fluid box_txt" style=" background-color:#474443; margin-top: -5rem">
+<div class="container-fluid">
+    <div class="row" style="">
+    <div class="col-md-3">
+        <img src="assets/img/logo_footer.png" style="width:50vh; height:15vh;">
+    </div>
+        <div class="col-md-3 text-center" style="color: white"><h1>PERUSAHAAN</h1>
+                <h4> Tentang Kami</h4>
+                <h4>Media</h4>
+            <a href="https://id-id.facebook.com/">
+                <img src="assets/img/fb_logo.png" style="height:4vw; margin:13px; margin-top:22%;margin-left:40%;"></img>
+            </a>
+            <a href="https://www.instagram.com/?hl=id">
+                <img src="assets/img/ig_logo.png" style="height:4vw; margin:13px; margin-top:22%;margin-left:5%"></img>
+            </a>
+
+        </div>
+    <div class="col-md-3 text-center" style="color: white"><h1>LAYANAN</h1>
+        <h4> Service</h4>
+        <h4>Diagnosa</h4>
+        <h4>Tips</h4>
+        <a href="https://twitter.com/?lang=id">
+            <img src="assets/img/tw_logo.png" style="height:4vw; margin:9px; margin-top:10%;"></img>
+        </a>
+        <a href="https://plus.google.com/discover">
+            <img src="assets/img/gg_logo.png" style="height:4vw; margin:9px; margin-top:10%;margin-right:40%"></img>
+        </a>
+    </div>
+        
+    <div class="col-md-3" style="float:right;">
+            
+    	<img  class="align-bottom" src="assets/img/bg_footer.png" style="width:50vh; height:45vh;margin-top:-3rem; margin-left:-1rem;">      
+    </div>
+</div>
+</div>
 </body>
 </html>
