@@ -13,6 +13,7 @@
 <script src="assets\js\bootstrap.min.js"></script>
 <script src="assets\js\fade.js"></script>
 <script class="cssdeck" src="assets\js\jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 	<style type="text/css">
 			.kotak
@@ -33,35 +34,29 @@
 			{
 				width: 400px;
 				height: 900px;
-				
-			background-image: url(assets/img/daftar.jpg);
-			
-				
-				
-	
+				background-image: url(assets/img/daftar.jpg);	
 			}
 			.username
 			{
 				width: 250px;
-				height: 30px;
-				border-radius: 10px;
+				height: 43px;
+				border-radius: 5px;
 				margin: 10px;
 			}
-			.username:hover
+			/*.username:hover
 			{
 				background-color: zoom;
   				-webkit-transform: scale(1.08);
  				transform: scale(1.08);
 				z-index: 50;
-			}
+			}*/
 			.submit
 			{
-				width: 100px;
-				height: 40px;
-				border-radius: 10px;
+				width: 250px;
+				height: 43px;
+				border-radius: 5px;
 				border: 0%;
-				background-color: orange;
-				
+				margin-bottom: 10px;				
 			}
 			.background
 			{
@@ -107,7 +102,27 @@
 			{
 				color: white;
 			}
+			input.ng-invalid {
+    			background-color: #D3D3D3;
+			}
 	</style>
+
+	<script type="text/javascript">
+		function validateForm() 
+		{
+    		var username = document.forms["myForm"]["username"].value;
+    		var password = document.forms["myForm"]["password"].value;
+ 		   	if (username == "arif" && password == "marda" && success == false) 
+ 	   		{
+        		alert("login success");
+        		return true;
+    		}
+    		else
+    		{
+    			alert("Maaf Username dan Password salah !")
+    		}
+		}
+	</script>
 
 	<script type="text/javascript">
 		function validateForm() 
@@ -166,14 +181,14 @@
 		<div class="col content-center ">
 		
 
-					<form name="myForm" onsubmit="return validateForm()" method="post" class="kotak row">
+					<form ng-app="" name="myForm" onsubmit="return validateForm()" method="post" class="kotak row">
 						<img class="kotak2 rounded-left col-xs-2"></img>
 						<div class="col-6">
 							<h4 class="center-block">SIGN UP/MENDAFTAR</h4>
-							<input type="text" name="username" placeholder="username" class="username form-control" required="wajib diisi">
-							<input type="text" name="email" placeholder="email" class="username form-control" required="wajib diisi">
-							<input type="password" name="password" placeholder="password" class="username form-control" required="wajib diisi">
-							<input type="submit" name="submit" class="submit" value="submit" href="https://facebook.com" alert="Your Registration Success">
+							<input type="text" name="username" ng-model="myText1" placeholder="| Username" class="username form-control" required="wajib diisi">
+							<input type="text" name="email" ng-model="myText2" placeholder="| E-mail" class="username form-control" required="wajib diisi">
+							<input type="password" name="password" ng-model="myText3" placeholder="| Password" class="username form-control" required="wajib diisi">
+							<input type="submit" name="submit" class="submit btn-warning" value="submit" href="https://facebook.com" alert="Your Registration Success">
 							<br>
 							<h7>Sudah mempunyai akun? Login
 								<a href="login.php" class="card-link"> disini </a>
@@ -183,7 +198,7 @@
 							<br>
 							<h7>
 								<a href="https://www.facebook.com" class="card-link">
-									<img src="assets/img/logofb.png" class="logofb"> facebook </a>
+									<img src="assets/img/logofb.png" class="logofb"> Facebook </a>
 								<a href="https://plus.google.com" class="card-link">
 									<img src="assets/img/google+.png" class="logofb"> Google+ </a>
 							</h7>
