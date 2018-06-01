@@ -156,7 +156,7 @@
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid orange;
+  border-top: 16px solid rgb(63, 63, 62);
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
@@ -198,3 +198,29 @@
   display: none;
   text-align: center;
 }
+
+
+.zoom_sol
+	{
+	}
+	.zoom_sol:hover
+		{
+			background-color: zoom;
+  			-webkit-transform: scale(1.08);
+ 			transform: scale(2.08);
+            z-index: 50;
+            margin-left:20rem;
+        }
+        
+        
+.zoom_sol1
+	{
+	}
+	.zoom_sol1:hover
+		{
+			background-color: zoom;
+  			-webkit-transform: scale(1.08);
+ 			transform: scale(2.08);
+            z-index: 50;
+            margin-right:20rem;
+		}

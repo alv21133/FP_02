@@ -46,19 +46,49 @@
         var txt;
         switch (nilai) {
             case 1:
-                txt = "Kerusakan terjadi Manifold Absolute Preasure !";
+                txt = "Kerusakan terjadi pada Manifold Absolute Preasure !";
                
                 break;
             case 7:
-                txt = "Kerusakan terjadi EOT/ECT (Engine Oil /Coolent Temperature) !";
+                txt = "Kerusakan terjadin pada EOT/ECT (Engine Oil /Coolent Temperature) !";
 
                 break;
             case 8:
-            txt = "Kerusakan terjadi Trotel Position !";
 
-            break;
+                txt = "Kerusakan terjadi Trotel Position !";
+                break;
+
+            case 9:
+            
+                txt = "Kerusakan terjadi pada Air Intake Teperature !";
+                break;
+
+            case 12:
+            
+                txt = "Kerusakan terjadi pada Injektor !";
+                break;
+
+            case 21:
+
+                txt = "Kerusakan terjadi pada Sensor O2/ oksigen !";
+                break;
+
+            case 29:
+
+                txt = "Kerusakan terjadi pada Idle Air Control Valve (IACV) !";
+                break;
+            case 33:
+
+                txt = "Kerusakan terjadi pada Engine Control Module (ECM) !";
+                break;
+            case 54:
+
+                txt = "Kerusakan terjadi pada Angel Sensor !";
+                break;
+
+
             default:
-                txt = "validasi code error !  Cek Beam input "
+                txt = "Kode Validasi Error !  ( Cek Beam Kembali ) "
 
         }
         document.getElementById("sol").innerHTML = txt;
@@ -69,25 +99,67 @@
         var kedip2 = panjang.value;
         var nilai = (kedip1 * 1) + (kedip2 * 10);
         var poto;
+        var yy;
         switch (nilai) {
             case 1:
                 txt = "assets/img/manipol_abs.png";
-                poto= "assets/img/o2.png";
+                poto= "assets/img/chart1.jpg";
+                yy= "assets/img/do_chart2.png";
                 break;
             case 7:
                 txt = "assets/img/eotect.png";
-
+                poto = "assets/img/chart3.jpg";
+                yy = "assets/img/do_chart.png";
                 break;
             case 8:
                 txt = "assets/img/throttle.png";
-
+                poto = "assets/img/chart3.jpg";
+                yy = "assets/img/do_chart2.png";
+                 yy = "assets/img/do_chart.png";
             break;
-            default:
-                txt = " "
+            
+            case 9:
+                txt = "assets/img/air_intake.png";
+                poto = "assets/img/chart4.jpg";
+                 yy = "assets/img/do_chart.png";
+            break;
 
+            case 12:
+                txt = "assets/img/injektor.png";
+                poto = "assets/img/chart1.jpg";
+                yy = "assets/img/do_chart2.png";
+            break;
+
+            case 21:
+                txt = "assets/img/o2.png";
+                poto = "assets/img/chart2.jpg";
+                 yy = "assets/img/do_chart.png";
+            break;
+            case 29:
+                txt = "assets/img/iavc.png";
+                poto = "assets/img/chart2.jpg";
+                yy = "assets/img/do_chart2.png";
+            break;
+            case 33:
+                txt = "assets/img/ecm.png";
+                poto = "assets/img/chart1.jpg";
+            break;
+
+            case 54:
+                txt = "assets/img/ecm.png";
+                poto = "assets/img/chart4.jpg";
+                yy = "assets/img/do_chart2.png";
+            break;
+
+
+            default:
+                txt = "assets/img/tdk_ditemukn.jpg"
+                poto = "assets/img/tdk_ditemukn.jpg";
+                yy = "assets/img/tdk_ditemukn.jpg";
         }
         document.getElementById("potos").src = txt;
         document.getElementById("potos2").src = poto;
+        document.getElementById("potos3").src = yy;
     }
 
     // loader function
@@ -104,6 +176,8 @@
         document.getElementById("loader").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
     }
+
+
 
 </script>
 
@@ -174,10 +248,10 @@
             <div class="form-group col-6 float-left">
                 <form id="rr">
                     <label for="inputPassword2" class="sr-only">Password</label>
-                    <input type="text" class="form-control text-center" id="pendek" placeholder=" Beam Pendek">
+                    <input required type="text" class="form-control text-center " id="pendek" placeholder=" Beam Pendek">
                     <br>
                     <label for="inputPassword2" class="sr-only">Password</label>
-                    <input type="text" class="form-control text-center" id="panjang" placeholder=" Beam Panjang">
+                    <input  required type="text" class="form-control text-center"id="panjang" placeholder=" Beam Panjang">
                 </form>
             
                 <button class="btn btn btn-outline-warning " style="margin-left: 25%" onclick=" hitung ();ket();poto(); loading();">diagnosa</button>
@@ -214,12 +288,11 @@
 <div class=" row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         
-                    <img  class="fade-right fade-ani col-3" src="assets/img/service.jpg" id="potos" style="height: 75%;" ></img>
-                    <img  class="fade-right fade-ani col-3" src="assets/img/service.jpg" id="potos2" style="height: 75%;" ></img>
-                    <img  class="fade-right fade-ani col-3" src="assets/img/service.jpg" id="potos" style="height: 75%;" ></img>
-           
-                     
-            </div>
+                    <img  class="fade-right fade-ani col-3 zoom_sol img-thumbnail" src="assets/img/diagnosa.jpg" id="potos" style="height: 75%;" ></img>
+                    <img  class="fade-right fade-ani col-3 zoom_sol img-thumbnail" src="assets/img/diagnosa.jpg" id="potos2" style="height: 75%;" ></img>
+                    <img  class="fade-right fade-ani col-3 zoom_sol1 img-thumbnail" src="assets/img/diagnosa.jpg" id="potos3" style="height: 75%;" ></img>
+
+
         </div>
         </div>
         </div>
