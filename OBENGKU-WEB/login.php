@@ -20,6 +20,7 @@
 <script src="assets\js\fade.js"></script>
 <script class="cssdeck" src="assets\js\jquery.min.js"></script> 
 <script src='https://www.google.com/recaptcha/api.js'></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<style type="text/css">
 			.kotak
 			{
@@ -38,23 +39,23 @@
 			}
 			.username
 			{
-				width: 250px;
-				height: 30px;
-				border-radius: 10px;
+				width: 300px;
+				height: 43px;
+				border-radius: 5px;
 				margin: 10px;
 			}
-			.username:hover
+/*			.username:hover
 			{
 				background-color: zoom;
   				-webkit-transform: scale(1.08);
  				transform: scale(1.08);
 				z-index: 50;
-			}
+			}*/
 			.submit
 			{
-				width: 100px;
-				height: 40px;
-				border-radius: 10px;
+				width: 300px;
+				height: 43px;
+				border-radius: 5px;
 				border: 0%;
 				margin-bottom: 10px;
 			}
@@ -90,6 +91,9 @@
 				margin-bottom: 40px;
 				width: 320px;
 				height: 75px;
+			}
+			input.ng-invalid {
+    			background-color: #D3D3D3;
 			}
 	</style>
 	<script type="text/javascript">
@@ -143,6 +147,24 @@
         </div>
 	</nav>
 	 <div  class="container-fluid " >
+
+	 		<script type="text/javascript">
+		function validateForm() 
+		{
+    		var username = document.forms["myForm"]["username"].value;
+    		var password = document.forms["myForm"]["password"].value;
+ 		   	if (username == "arif" && password == "marda" && success == false) 
+ 	   		{
+        		alert("login success");
+        		return true;
+    		}
+    		else
+    		{
+    			alert("Maaf Username dan Password salah !")
+    		}
+		}
+	</script>
+
 	<!-- header -->
 	<?php if (isset($success)) 
 	{			
@@ -164,18 +186,18 @@
 <br>	<div class="row d-flex">
 			<div class="col"></div>
 		<div class="col content-center ">
-		<form name="myForm" action="?" onsubmit="return validateForm()" method="post" class="kotak col-xs-6">
+		<form ng-app="" name="myForm" action="?" onsubmit="return validateForm()" method="post" class="kotak col-xs-6">
 			<img src="assets/img/logo.png" class="logo">
 			<h4 class="sign center-block" >MASUK</h4>
-			<input type="text" name="username" placeholder="username" class="username form-control"required="wajib diisi">
-			<input type="password" name="password" placeholder="password" class="username form-control"required="wajib diisi">
+			<input type="text" name="username" ng-model="myText1" placeholder="| Username" class="username form-control"required="wajib diisi">
+			<input type="password" name="password" ng-model="myText2" placeholder="| Password" class="username form-control"required="wajib diisi">
 			
 			 <div class="form-group">
                      <div class="g-recaptcha" data-sitekey="6LfZN1sUAAAAAK7jcj-hw7qI7geqi9X8Q9ma5UMT"></div>
              </div>
 
-			<input type="submit" name="submit" class="submit btn-outline-light" value="submit" href="https://facebook.com" onclick="validate()">
-			<h7> <a href="https://www.facebook.com" class="card-link"> <img src="assets/img/logofb.png" class="logofb"> facebook </a> <a href="https://plus.google.com" class="card-link"><img src="assets/img/google+.png" class="logofb"> Google+ </a></h7>
+			<input type="submit" name="submit" class="submit btn-dark" value="LOG IN" href="https://facebook.com" onclick="validate()">
+			<h7> <a href="https://www.facebook.com" class="card-link"> <img src="assets/img/logofb.png" class="logofb"> Facebook </a> <a href="https://plus.google.com" class="card-link"><img src="assets/img/google+.png" class="logofb"> Google+ </a></h7>
 		</form>
 			</div>	
 		<div class="col"></div>
