@@ -177,8 +177,17 @@
         document.getElementById("myDiv").style.display = "block";
     }
 
-
-
+// valid
+    function validasi() {
+        var nama = document.getElementById("pendek").value;
+        var email = document.getElementById("panjang").value;
+        
+        if (nama != "" && email != "" && nama <=10 && email <=10) {
+            return true;
+        } else {
+           window.alert('Form tidak boleh kosong ! input antara 0 sampai 9');
+        }
+    }
 </script>
 
 
@@ -248,13 +257,13 @@
             <div class="form-group col-6 float-left">
                 <form id="rr">
                     <label for="inputPassword2" class="sr-only">Password</label>
-                    <input  type="text" class="form-control text-center " id="pendek" placeholder=" Beam Pendek"required>
+                    <input  type="text" class="form-control text-center " id="pendek" placeholder=" Beam Pendek" title="Masukan antara 0 sampa 9">
                     <br>
                     <label for="inputPassword2" class="sr-only">Password</label>
-                    <input   type="text" class="form-control text-center"id="panjang" placeholder=" Beam Panjang" required>
+                    <input   type="text" class="form-control text-center"id="panjang" placeholder=" Beam Panjang" title="Masukan antara 0 sampa 9">
                 </form>
             
-                <button class="btn btn btn-outline-warning " style="margin-left: 25%" onclick=" hitung ();ket();poto(); loading();">diagnosa</button>
+                <button class="btn btn btn-outline-warning " style="margin-left: 25%" onclick=" validasi(); hitung ();ket();poto(); loading();">diagnosa</button>
                 <button class="btn btn btn-outline-warning " style="margin-left: 5%" onclick=" hapus(); window.location.reload();">reset</button>
             
             </div>

@@ -169,10 +169,12 @@
 	<?php if (isset($success)) 
 	{			
 
-            if ($success == true ) 
+			
+
+            if ($success == true && $_POST["username"]=="arif" && $_POST["password"]=="marda" ) 
             	{ ?>
             		<script type="text/javascript">
-            			 window.location = "http://www.google.com/";
+            			 window.location = "dashboard.html";
             		</script>
 
             	<? } 
