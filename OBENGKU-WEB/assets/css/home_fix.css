@@ -28,7 +28,7 @@
     }
     .parallax2 {
         /* The image used */
-        background-image: url('../img/peta.png');
+        background-image: url('../img/peta.jpg');
 
         /* Full height */
         height: 100%;
@@ -85,9 +85,10 @@
 
 .btn_login{
    border-radius:100px;
-   width: 21%;
+    padding-left: 10%;
+    padding-right: 10%;
    color: white;
-   bottom: 27%;
+   bottom: 6rem;
 
   
 }	
@@ -98,9 +99,9 @@
 }
 
 .warna{
-   color: white;
+   color:black;
    font-size: 24px;
-   border-color: black;
+   border-color: rgb(255, 255, 255);
   
  
   /* Set up the hover */
@@ -221,6 +222,18 @@
 			background-color: zoom;
   			-webkit-transform: scale(1.08);
  			transform: scale(2.08);
+            z-index: 50;
+            margin-right:20rem;
+		}
+        
+.zoom_das
+	{
+	}
+	.zoom_das:hover
+		{
+			background-color: zoom;
+  			-webkit-transform: scale(1.08);
+ 			transform: scale(1.08);
             z-index: 50;
             margin-right:20rem;
 		}
