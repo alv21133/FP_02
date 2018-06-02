@@ -204,6 +204,50 @@
 			</div>	
 		<div class="col"></div>
 	</div>
-	</div>	
+	</div>
+	
+	
+<div class="footer" style=" background-color:#474443;margin-top: 4rem">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <img src="assets/img/logo_footer.png" style="width:50vh; height:15vh;"></img>
+            </div>
+            <div class="col-3 " style="color: white; margin-left:10px;">
+                <h1>PERUSAHAAN</h1>
+                <h4> Tentang Kami</h4>
+                <h4>Media</h4>
+                <a href="https://id-id.facebook.com/">
+                    <img src="assets/img/fb_logo.png" style="height:4vw; margin:35px; margin-top:22%;"></img>
+                </a>
+                <a href="https://www.instagram.com/?hl=id">
+                    <img src="assets/img/ig_logo.png" style="height:4vw; margin:35px; margin-top:22%;" </img>
+                </a>
+            </div>
+            <div class="col-3" style="color: white">
+                <h1>LAYANAN</h1>
+                <h4> Service</h4>
+                <h4>Diagnosa</h4>
+                <h4>Tips</h4>
+                <a href="https://twitter.com/?lang=id">
+                    <img src="assets/img/tw_logo.png" style="height:4vw; margin:35px; margin-top:10%;"></img>
+                </a>
+                <a href="https://plus.google.com/discover">
+                    <img src="assets/img/gg_logo.png" style="height:4vw; margin:35px; margin-top:10%;"></img>
+                </a>
+            </div>
+            <div class="col-23" style="float:right;">
+
+                <img class="align-bottom" src="assets/img/bg_footer.png" style="width:45vh; height:41vh;">
+
+
+            </div>
+        </div>
+    </div>
+    </footer>
+
+
+
+
 </body>
 </html>
