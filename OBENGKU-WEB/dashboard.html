@@ -222,13 +222,22 @@
 <div class="bg">
 <div class="kotak1 rounded">
 	<div class="bundar"></div>
+
+	<div class="row">
+		<div class="col-6">
+			<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#rating">RATING</button>
+		</div>
+		<div class="col-6">
+			<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#logout">Log out</button></div>
+	</div>
+
+<div style="margin: 1rem"></div>
 	<button type="button" class="btn btn-dark bton" data-toggle="modal" data-target="#myModal">BIODATA</button>
-	<button type="button" class="btn btn-dark bton" data-toggle="modal" data-target="#myModal">RATING</button>
 	<button type="button" class="btn btn-dark bton" data-toggle="modal" data-target="#myModal">LOKASI</button>
 	<button type="button" class="btn btn-dark bton" data-toggle="modal" data-target="#myModal">KONTAK</button>
 </div>
 	<div class="kotak2 container-fluid">
-				<h1 class="font"> <CENTER> DASHBOARD </CENTER></h1>
+				<h1> <CENTER> DASHBOARD </CENTER></h1>
 				<br>				
 				<div class="row">
 								<div class="col-2"><h4 style="margin-left: 5rem"><b>PERFORMA</b></h4>
@@ -410,7 +419,42 @@
       	</div>
     </div>
 </div>
-
+<div class="modal fade" id="logout" role="dialog">
+    <div class="modal-dialog modal-lg">
+      	<div class="modal-content">
+        	<div class="modal-header text-center" style="background-color: orange">
+          		<h4 class="modal-title" style="color: white"> <b>Acoount </b>| Pak Mull Bengkel</h4>
+        	</div>
+	        <div class="modal-body">
+	          <h2>Anda Yakin ingin keluar dari dashboard  ?</h2>
+	        </div>
+	        <div class="modal-footer">
+	          	<a href="login.html"><button type="button" class="btn btn-default" style="padding-left:22px;padding-right:22px">ya</button></a>
+	          	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+      	</div>
+    </div>
+</div>
+<div class="modal fade" id="rating" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header text-center" style="background-color: orange">
+				<h4 class="modal-title" style="color: white">
+					<b> About </b>| Pak Mull Bengkel</h4>
+			</div>
+			<div class="modal-body">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
