@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Daftar</title>
+<html  class="no-js" ng-app="PasswordStrength">
+<head >
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Mr Bengkel</title>
+<title>Daftar</title>
+<link rel="icon" href="assets/img/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.css" />
 <link rel="stylesheet" href="assets\css\home_fix.css">
 <script src="assets\js\jquery-3.3.1.min.js"></script>
 <script src="assets\js\bootstrap.min.js"></script>
 <script src="assets\js\fade.js"></script>
-<script class="cssdeck" src="assets\js\jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="../OBENGKU-WEB/assets/js/angular.min.js"></script>	
+<script src="../OBENGKU-WEB/assets/js/zxcvbn.js	"></script>	
+
+
 
 	<style type="text/css">
 			.kotak
@@ -105,24 +107,16 @@
 			input.ng-invalid {
     			background-color: #D3D3D3;
 			}
+
+
+
+
+			
 	</style>
 
-	<script type="text/javascript">
-		function validateForm() 
-		{
-    		var username = document.forms["myForm"]["username"].value;
-    		var password = document.forms["myForm"]["password"].value;
- 		   	if (username == "arif" && password == "marda" && success == false) 
- 	   		{
-        		alert("login success");
-        		return true;
-    		}
-    		else
-    		{
-    			alert("Maaf Username dan Password salah !")
-    		}
-		}
-	</script>
+	
+
+
 
 	<script type="text/javascript">
 		function validateForm() 
@@ -140,65 +134,7 @@
         		return true;
     		}
 		}
-	</script>
-	<script>
-	var myInput = document.getElementById("psw");
-	var letter = document.getElementById("letter");
-	var capital = document.getElementById("capital");
-	var number = document.getElementById("number");
-	var length = document.getElementById("length");
-
-	// When the user clicks on the password field, show the message box
-	myInput.onfocus = function() {
-	    document.getElementById("message").style.display = "block";
-	}
-
-	// When the user clicks outside of the password field, hide the message box
-	myInput.onblur = function() {
-	    document.getElementById("message").style.display = "none";
-	}
-
-	// When the user starts to type something inside the password field
-	myInput.onkeyup = function() {
-	  // Validate lowercase letters
-	  var lowerCaseLetters = /[a-z]/g;
-	  if(myInput.value.match(lowerCaseLetters)) {  
-	    letter.classList.remove("invalid");
-	    letter.classList.add("valid");
-	  } else {
-	    letter.classList.remove("valid");
-	    letter.classList.add("invalid");
-	  }
-	  
-	  // Validate capital letters
-	  var upperCaseLetters = /[A-Z]/g;
-	  if(myInput.value.match(upperCaseLetters)) {  
-	    capital.classList.remove("invalid");
-	    capital.classList.add("valid");
-	  } else {
-	    capital.classList.remove("valid");
-	    capital.classList.add("invalid");
-	  }
-
-	  // Validate numbers
-	  var numbers = /[0-9]/g;
-	  if(myInput.value.match(numbers)) {  
-	    number.classList.remove("invalid");
-	    number.classList.add("valid");
-	  } else {
-	    number.classList.remove("valid");
-	    number.classList.add("invalid");
-	  }
-	  
-	  // Validate length
-	  if(myInput.value.length >= 8) {
-	    length.classList.remove("invalid");
-	    length.classList.add("valid");
-	  } else {
-	    length.classList.remove("valid");
-	    length.classList.add("invalid");
-	  }
-	}
+	
 </script>
 
 </head>
@@ -244,10 +180,100 @@
 						<img class="kotak2 rounded-left col-xs-2"></img>
 						<div class="col-6">
 							<h4 class="center-block">SIGN UP/MENDAFTAR</h4>
-							<input type="text" name="username" ng-model="myText1" placeholder="| Username" class="username form-control" required="wajib diisi">
-							<input type="text" name="email" ng-model="myText2" placeholder="| E-mail" class="username form-control" required="wajib diisi">
-							<input type="password" name="password" ng-model="myText3" placeholder="| Password" class="username form-control" required="wajib diisi">
+							<input type="text" name="username" ng-model="myText1" placeholder="| Username" class="username form-control" required>
+							<input type="text" name="email" ng-model="myText2" placeholder="| E-mail" class="username form-control" required >
+<!-- 														
+							<input type="password" name="password" ng-model="myText3" placeholder="| Password" class="username form-control" required="wajib diisi"> -->
+							<input type="password" class="form-control ok-password username" ng-class="(joinTeamForm.password.$dirty && joinTeamForm.password.$invalid) ? 'error' : ''"
+							 id="password" name="password" placeholder="Password" ng-required="true" ng-model="password">
+							
+<div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>
+	{{ password | passwordCount:7 }}</div>
+
+<div class="strength-meter" >
+	<div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+</div>
+
 							<input type="submit" name="submit" class="submit btn-warning" value="submit" href="https://facebook.com" alert="Your Registration Success">
+							
+							<!-- password strengh -->
+
+
+
+
+
+
+
+
+<script>
+	(function () {
+
+			angular.module('PasswordStrength', [])
+
+				.controller('FormController', function ($scope) { })
+
+				.filter('passwordCount', [function () {
+					return function (value, peak) {
+						value = angular.isString(value) ? value : '';
+						peak = isFinite(peak) ? peak : 7;
+
+						return value && (value.length > peak ? peak + '+' : value.length);
+					};
+				}])
+
+				.factory('zxcvbn', [function () {
+					return {
+						score: function () {
+							var compute = zxcvbn.apply(null, arguments);
+							return compute && compute.score;
+						}
+					};
+				}])
+
+				.directive('okPassword', ['zxcvbn', function (zxcvbn) {
+					return {
+						// restrict to only attribute and class
+						restrict: 'AC',
+
+						// use the NgModelController
+						require: 'ngModel',
+
+						// add the NgModelController as a dependency to your link function
+						link: function ($scope, $element, $attrs, ngModelCtrl) {
+							$element.on('blur change keydown', function (evt) {
+								$scope.$evalAsync(function ($scope) {
+									// update the $scope.password with the element's value
+									var pwd = $scope.password = $element.val();
+
+									// resolve password strength score using zxcvbn service
+									$scope.passwordStrength = pwd ? (pwd.length > 7 && zxcvbn.score(pwd) || 0) : null;
+
+									// define the validity criterion for okPassword constraint
+									ngModelCtrl.$setValidity('okPassword', $scope.passwordStrength >= 2);
+								});
+							});
+						}
+					};
+				}]);
+
+		})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!-- password strengh -->
+							
+							
 							<br>
 							<h7>Sudah mempunyai akun? Login
 								<a href="login.html" class="card-link"> disini </a>
@@ -268,7 +294,47 @@
 			</div>
 		<div class="col"></div>
 	</div>
-</div>
+
+
+<div class="footer" style=" background-color:#474443;margin-top:8rem">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+				<img src="assets/img/logo_footer.png" style="width:50vh; height:15vh;"></img>
+			</div>
+			<div class="col-3 " style="color: white; margin-left:10px;">
+				<h1>PERUSAHAAN</h1>
+				<h4> Tentang Kami</h4>
+				<h4>Media</h4>
+				<a href="https://id-id.facebook.com/">
+					<img src="assets/img/fb_logo.png" style="height:4vw; margin:35px; margin-top:22%;"></img>
+				</a>
+				<a href="https://www.instagram.com/?hl=id">
+					<img src="assets/img/ig_logo.png" style="height:4vw; margin:35px; margin-top:22%;" </img>
+				</a>
+			</div>
+			<div class="col-3" style="color: white">
+				<h1>LAYANAN</h1>
+				<h4> Service</h4>
+				<h4>Diagnosa</h4>
+				<h4>Tips</h4>
+				<a href="https://twitter.com/?lang=id">
+					<img src="assets/img/tw_logo.png" style="height:4vw; margin:35px; margin-top:10%;"></img>
+				</a>
+				<a href="https://plus.google.com/discover">
+					<img src="assets/img/gg_logo.png" style="height:4vw; margin:35px; margin-top:10%;"></img>
+				</a>
+			</div>
+			<div class="col-23" style="float:right;">
+
+				<img class="align-bottom" src="assets/img/bg_footer.png" style="width:45vh; height:41vh;">
+
+
+			</div>
+		</div>
+	</div>
+	</footer>
+
 
 </body>
 </html>
